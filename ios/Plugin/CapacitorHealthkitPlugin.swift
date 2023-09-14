@@ -407,8 +407,17 @@ public class CapacitorHealthkitPlugin: CAPPlugin {
                 } else if sample.quantityType.is(compatibleWith: HKUnit.moleUnit(withMolarMass: HKUnitMolarMassBloodGlucose).unitDivided(by: HKUnit.literUnit(with: .kilo))) {
                     unit = HKUnit.moleUnit(withMolarMass: HKUnitMolarMassBloodGlucose).unitDivided(by: HKUnit.literUnit(with: .kilo))
                     unitName = "mmol/L"
+                } else if sampleName == "dietaryFatTotal" {
+                    unit = HKUnit.gram()
+                    unitName = "g"
+                } else if sampleName == "dietaryCarbohydrates" {
+                    unit = HKUnit.gram()
+                    unitName = "g"
+                } else if sampleName == "dietaryProtein" {
+                    unit = HKUnit.gram()
+                    unitName = "g"
                 } else {
-                    print("Error: unknown unit type")
+                    print("Error: unknown unit type for sample name: \(sampleName)")
                 }
 
                 var value: Double 
