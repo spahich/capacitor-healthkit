@@ -60,6 +60,13 @@ public class CapacitorHealthkitPlugin: CAPPlugin {
             return HKQuantityType.quantityType(forIdentifier: HKQuantityTypeIdentifier.bodyMass)!
         case "heartRate":
              return HKQuantityType.quantityType(forIdentifier: HKQuantityTypeIdentifier.heartRate)!
+        // New quantities added by Leonardo Benini
+        case "dietaryFatTotal":
+            return HKQuantityType.quantityType(forIdentifier:  HKQuantityTypeIdentifier.dietaryFatTotal)!
+        case "dietaryCarbohydrates":
+            return HKQuantityType.quantityType(forIdentifier:  HKQuantityTypeIdentifier.dietaryCarbohydrates)!
+        case "dietaryProtein":
+            return HKQuantityType.quantityType(forIdentifier:  HKQuantityTypeIdentifier.dietaryProtein)!
         default:
             return nil
         }
@@ -90,6 +97,11 @@ public class CapacitorHealthkitPlugin: CAPPlugin {
                 types.insert(HKQuantityType.quantityType(forIdentifier: HKQuantityTypeIdentifier.bodyMass)!)
             case "heartRate":
                  types.insert(HKQuantityType.quantityType(forIdentifier: HKQuantityTypeIdentifier.heartRate)!)
+            // New types added by Leonardo Benini
+            case "nutrition":
+                types.insert(HKQuantityType.quantityType(forIdentifier: HKQuantityTypeIdentifier.dietaryFatTotal)!)
+                types.insert(HKQuantityType.quantityType(forIdentifier: HKQuantityTypeIdentifier.dietaryCarbohydrates)!)
+                types.insert(HKQuantityType.quantityType(forIdentifier: HKQuantityTypeIdentifier.dietaryProtein)!)
             default:
                 print("no match in case: " + item)
             }
