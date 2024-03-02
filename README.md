@@ -29,7 +29,7 @@ You can simply put this into the `info.plist` file
 Do
 
 ```
-npm i --save @leobenini/capacitor-healthkit
+npm i --save @spahich/capacitor-healthkit
 ```
 
 Then

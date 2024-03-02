@@ -485,9 +485,10 @@ public class CapacitorHealthkitPlugin: CAPPlugin {
         let writeTypes: Set<HKSampleType> = getTypes(items: _write).union(getTypes(items: _all))
         let readTypes: Set<HKSampleType> = getTypes(items: _read).union(getTypes(items: _all))
 
-        healthStore.requestAuthorization(toShare: writeTypes, read: readTypes) { success, _ in
+        healthStore.requestAuthorization(toShare: writeTypes, read: readTypes) { (success, error) in
             if !success {
-                call.reject("Could not get permission")
+//                call.reject("Could not get permission")
+                call.reject(error)
                 return
             }
             call.resolve()
