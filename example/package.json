@@ -14,7 +14,7 @@
     "@capacitor/core": "latest",
     "@capacitor/camera": "latest",
     "@capacitor/splash-screen": "latest",
-    "@leobenini/capacitor-healthkit": "file:.."
+    "@spahich/capacitor-healthkit": "file:.."
   },
   "devDependencies": {
     "@capacitor/cli": "latest"

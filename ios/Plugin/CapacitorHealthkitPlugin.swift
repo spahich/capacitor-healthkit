@@ -487,8 +487,7 @@ public class CapacitorHealthkitPlugin: CAPPlugin {
 
         healthStore.requestAuthorization(toShare: writeTypes, read: readTypes) { (success, error) in
             if !success {
-//                call.reject("Could not get permission")
-                call.reject(error)
+                call.reject("Could not get permission \(String(describing: error))")
                 return
             }
             call.resolve()

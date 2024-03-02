@@ -1,5 +1,5 @@
 {
-  "name": "@leobenini/capacitor-healthkit",
+  "name": "@spahich/capacitor-healthkit",
   "version": "1.3.2",
   "description": "Capacitor plugin to read data from and write data to Apple Health",
   "main": "dist/plugin.cjs.js",
@@ -9,16 +9,16 @@
   "files": [
     "dist/",
     "ios/Plugin/",
-    "LeobeniniCapacitorHealthkit.podspec"
+    "SpahichCapacitorHealthkit.podspec"
   ],
   "author": "Leonardo Benini",
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/leobenini/capacitor-healthkit.git"
+    "url": "git+https://github.com/spahich/capacitor-healthkit.git"
   },
   "bugs": {
-    "url": "https://github.com/leobenini/capacitor-healthkit/issues"
+    "url": "https://github.com/spahich/capacitor-healthkit/issues"
   },
   "keywords": [
     "capacitor",
